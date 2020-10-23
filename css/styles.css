@@ -1,5 +1,4 @@
 /* GLOBAL PROPS */
-
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background: #f3f3f3 fixed url(/registree/images/background.jpg);
@@ -7,7 +6,7 @@ body {
   padding: 0px;
 }
 
-/* NAVBAR/HEADING */
+/* NAVBAR/HEADING  */
 #heading {
   width: 100%;
   position: fixed;
@@ -38,7 +37,7 @@ body {
 
 /* LAYOUT SPACER */
 .spacer {
-  height: 20vh;
+  height: 30vh;
 }
 
 /* FIELDS OF STUDIES - BUTTONS */
@@ -50,9 +49,139 @@ button.btn.btnStudyFields {
   color: #ffffff;
 }
 
-/* COLLAPSE FEATURE */
+/* BUTTON PSUEDO'S */
+button.btn.btnStudyFields:focus {
+  background-color: teal;
+  border: none;
+}
 
+button.btn.btnStudyFields:hover {
+  transform: scale(0.95);
+  border-right: #555 4px solid;
+  border-bottom: #555 3px solid;
+}
+
+button.btn.btnStudyCourseLeft {
+  background-color: teal;
+  margin: 3px;
+  width: 100%;
+  text-align: left;
+}
+
+button.btn.btnStudyCourseMiddle {
+  background-color: #d9534f;
+  margin: 3px;
+  width: 100%;
+  text-align: left;
+}
+
+button.btn.btnStudyCourseRight {
+  background-color: #f7f7f7;
+  margin: 3px;
+  width: 100%;
+  text-align: left;
+}
+
+/* BUTTON PSUEDO'S */
+button.btn.btnStudyCourse:hover {
+  background-color: transparent;
+  margin: 3px;
+  width: 100%;
+  color: #ffffff;
+}
+
+/* COLLAPSE FEATURE */
 .collapseFieldContainer {
   display: flex;
   margin: 0 auto 20px;
+}
+
+.collapseFieldLeft button,
+.collapseFieldMiddle button,
+.collapseFieldRight button {
+  border: 1px solid white;
+  display: table-cell;
+  vertical-align: middle;
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  font-size: small;
+  line-height: 20px;
+  display: table-cell;
+  vertical-align: middle;
+  margin-right: 20px;
+  border: 3px solid white;
+}
+
+.collapseFieldLeft button {
+  background-color: teal;
+  color: #ffffff;
+}
+
+.collapseFieldMiddle button {
+  background-color: #d9534f;
+}
+
+.collapseFieldRight button {
+  background-color: #f7f7f7;
+}
+
+/* ARRAY DATA DISPLAY CONTAINER */
+.fieldDisplay {
+  width: 100%;
+  display: flex;
+}
+
+/* INDIVIDUAL ARRAY DATA DISPLAY CONTAINER */
+div#output,
+div#output2,
+div#output3 {
+  display: inline-block;
+  width: 100%;
+  margin-top: 0;
+  border: 1px solid white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+div#output {
+  background-color: #292b2c;
+  border-top: 10px solid teal;
+}
+
+div#output2 {
+  background-color: #292b2c;
+  border-top: 10px solid #d9534f;
+}
+
+div#output3 {
+  background-color: #292b2c;
+  border-top: 10px solid #f7f7f7;
+}
+
+div#output {
+  margin-right: auto;
+}
+
+div#output2 {
+  margin-left: auto;
+}
+
+div#output3 {
+  margin-left: auto;
+}
+
+div#output1 {
+  background-color: #292b2c;
+  display: inline-block;
+  margin: 20px auto;
+  text-align: left;
+}
+
+div#output5 {
+  display: none;
 }
