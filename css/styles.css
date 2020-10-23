@@ -1,0 +1,38 @@
+/* GLOBAL PROPS */
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: #f3f3f3 fixed url(/registree/images/background.jpg);
+  margin: 5px;
+  padding: 0px;
+
+}
+
+
+
+.heading {
+  width: 100%;
+  position: fixed;
+  padding: 10px;
+  font-size: 40px;
+  color: #292b2c;
+
+}
+
+#headingTitle {
+
+  display: inline;
+  font-size: 70px;
+  font-weight: bolder;
+}
+
+#title {
+  font-weight: 50;
+  color: #555;
+}
+
+#coursesAdded {
+
+  float: right;
+  margin-top: 5px;
+}
