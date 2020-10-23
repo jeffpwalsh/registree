@@ -65,8 +65,38 @@ async function fetchData() {
     //---------------------------------CREATE NEW SET TO RETURN NEW ARRAY WITHOUT DUPLICATES (DURATION)
     const courseDurationSet = [...new Set(courseDuration)];
     console.log(courseDurationSet);
+
+    //---------------------------------UPDATE DOM
+    let output = '';
+    output = courseNameSet.forEach((field) => {
+      output += `<button class="btn btnStudyFields">${field}</button>`;
+      document.getElementById('output').innerHTML = output;
+    });
+
+    //--------------------------------UPDATE DOM
+    let output2 = '';
+    output2 = courseLevelSet.forEach((field) => {
+      output2 += `<button class="btn btnStudyFields">${field}</button>`;
+      document.getElementById('output2').innerHTML = output2;
+    });
+
+    //-------------------------------UPDATE DOM
+    let output3 = '';
+    output3 = courseDurationSet.forEach((field) => {
+      output3 += `<button class="btn btnStudyFields">${field}</button>`;
+      document.getElementById('output3').innerHTML = output3;
+    });
+
   }
 }
+
+//--------------------------------EVENT OBJECT ONCLICK - RETURNS CLICKED FIELD ARRAY OF COURSES
+
+//EVENT LISTENERS
+document.querySelector('#output').addEventListener('click', onclick);
+document.querySelector('#output2').addEventListener('click', onclick2);
+document.querySelector('#output3').addEventListener('click', onclick3);
+document.querySelector('#output1').addEventListener('click', onclickCourse);
 
 //CALL FETCH FUNCTION
 fetchData()
