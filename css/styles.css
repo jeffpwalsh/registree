@@ -5,23 +5,23 @@ body {
   background: #f3f3f3 fixed url(/registree/images/background.jpg);
   margin: 5px;
   padding: 0px;
-
 }
 
-
-
-.heading {
+/* NAVBAR/HEADING */
+#heading {
   width: 100%;
   position: fixed;
   padding: 10px;
   font-size: 40px;
   color: #292b2c;
-
 }
 
-#headingTitle {
+#heading h1 i {
+  color: black;
+  position: fixed;
+}
 
-  display: inline;
+#heading h1 {
   font-size: 70px;
   font-weight: bolder;
 }
@@ -31,8 +31,28 @@ body {
   color: #555;
 }
 
-#coursesAdded {
-
+#heading .btn {
   float: right;
   margin-top: 5px;
+}
+
+/* LAYOUT SPACER */
+.spacer {
+  height: 20vh;
+}
+
+/* FIELDS OF STUDIES - BUTTONS */
+button.btn.btnStudyFields {
+  background-color: #292b2c;
+  margin: 3px;
+  border-right: 4px solid;
+  border-bottom: 3px solid;
+  color: #ffffff;
+}
+
+/* COLLAPSE FEATURE */
+
+.collapseFieldContainer {
+  display: flex;
+  margin: 0 auto 20px;
 }

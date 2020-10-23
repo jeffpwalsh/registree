@@ -1,55 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- BOOTSTRAP CDN -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-      crossorigin="anonymous"
-    />
-    <!-- CSS STYLE SHEET -->
-    <link rel="stylesheet" href="./css/styles.css" />
-    <title>University Data - Registree</title>
-  </head>
 
-  <body>
-    <!-- LOADING GIF FOR ASYNC API FETCH -->
-    <section id="loadingSection">
-      <div class="loading"></div>
-    </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 
-    <!-- HEADING / CONTAINER FOR ADDED COURSES -->
-    <section id="headerSection">
-      <div class="heading">
-        <h1 id="headingTitle">University</h1>
-        <span id="title">Data</span>
-        <button id="coursesAdded">Courses Added</button>
-      </div>
-    </section>
+  <!-- BOOTSTRAP CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <!-- CSS STYLE SHEET -->
+  <link rel="stylesheet" href="./css/styles.css" />
+  <title>University Data - Registree</title>
+</head>
+
+<body>
+  <!-- LOADING GIF FOR ASYNC API FETCH -->
+  <section id="loading">
+   
+  </section>
+
+  <!-- HEADING / CONTAINER FOR ADDED COURSES -->
+  <section id="bodySection">
+    <div id="heading">
+      <i class="fas fa-university fa-3x"></i>
+      <h1 style="display:inline"> University <span id="title">Data</span></h1>
+      <button class="btn btn-warning id=coursesAdded"><b>&#x270E; Courses Added</b>
+        <hr>
+        <div id="output5"></div>
+      </button>
+    </div>
 
     <!-- UTILITY SPACER -->
     <div class="spacer"></div>
 
     <!-- BUTTONS TO FILTER DATA ACCORIDNG TO USER PREF-->
-    <section id="bodySection">
-      <div class="collapseFieldContainer">
-        <div><button>Fields of Study</button></div>
-        <div><button>Course Levels</button></div>
-        <div><button>Program Durations</button></div>
-      </div>
 
-      <!-- CONTAINER FOR SORTED/FILTERED API DATA FETCHED -->
-      <div class="fieldDisplay">
-        <div class="output1"></div>
-        <div class="output2"></div>
-        <div class="output3"></div>
-      </div>
-      <div class="output4"></div>
-    </section>
+    <div class="collapseFieldContainer">
+      <div class="collapseFieldLeft"><button> Fields of Study <br>&#x2795; </button></div>
+      <div class="collapseFieldMiddle"><button> Course Levels <br>&#x2795;</button></div>
+      <div class="collapseFieldRight"><button> Program Durations <br>&#x2795;</button></div>
+
+    </div>
+
+    <!-- CONTAINER FOR SORTED/FILTERED API DATA FETCHED -->
+    <div class="fieldDisplay">
+      <div id="output"></div>
+      <div id="output2"></div>
+      <div id="output3"></div>
+    </div>
+    <div id="output1"></div>
+
     <!-- JAVASCRIPT FILE LINK -->
     <script src="./JS/app.js"></script>
-  </body>
+</body>
+
 </html>
