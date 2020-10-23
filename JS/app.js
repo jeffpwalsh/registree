@@ -90,13 +90,115 @@ async function fetchData() {
   }
 }
 
-//--------------------------------EVENT OBJECT ONCLICK - RETURNS CLICKED FIELD ARRAY OF COURSES
-
-//EVENT LISTENERS
+//-----------------------------------EVENT LISTENERS
 document.querySelector('#output').addEventListener('click', onclick);
 document.querySelector('#output2').addEventListener('click', onclick2);
 document.querySelector('#output3').addEventListener('click', onclick3);
 document.querySelector('#output1').addEventListener('click', onclickCourse);
+
+
+//--------------------------------EVENT OBJECT ONCLICK - RETURNS CLICKED FIELD ARRAY OF COURSES
+function onclick(e) {
+  let val = e.target.textContent;
+  let valArr = groupedByName[val];
+  console.log(val);
+  console.log(valArr);
+  document.getElementById('loading').style.display = 'block';
+  document.getElementById('output1').style.display = 'none';
+
+  setTimeout(
+    function () {
+      let output1 = '';
+      output1 = valArr.forEach((course) => {
+        output1 += `<button class=" btn btnStudyCourseLeft">${course.duration} : ${course.level} : ${course.code} <em><b style="float:right">(${course.name})</b></em></button> <br>`;
+        document.getElementById('output1').innerHTML = output1;
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('output1').style.display = 'block';
+        document.getElementById('output1').style.backgroundColor = '#333';
+        document.getElementById('output1').style.color = '#ffffff';
+      });
+    },
+
+    2000
+  );
+}
+
+
+//-------------------------------EVENT OBJECT ONCLICK - RETURNS CLICKED FIELD ARRAY OF COURSES
+function onclick2(e) {
+  let val = e.target.textContent;
+  let valArr = groupedByLevel[val];
+  console.log(val);
+  console.log(valArr);
+  document.getElementById('loading').style.display = 'block';
+  document.getElementById('output1').style.display = 'none';
+
+  setTimeout(
+    function () {
+      let output1 = '';
+      output1 = valArr.forEach((course) => {
+        output1 += `<button class=" btn btnStudyCourseMiddle">${course.duration} : <em><b style="float:right">${course.level}</b></em> : ${course.code} (${course.name})</button> <br>`;
+        document.getElementById('output1').innerHTML = output1;
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('output1').style.display = 'block';
+        document.getElementById('output1').style.backgroundColor = '#333';
+        document.getElementById('output1').style.color = '#ffffff';
+      });
+    },
+
+    2000
+  );
+}
+
+//-------------------------------EVENT OBJECT ONCLICK - RETURNS CLICKED FIELD ARRAY OF COURSES
+function onclick3(e) {
+  let val = e.target.textContent;
+  let valArr = groupedByDuration[val];
+  console.log(val);
+  console.log(valArr);
+  document.getElementById('loading').style.display = 'block';
+  document.getElementById('output1').style.display = 'none';
+
+  setTimeout(
+    function () {
+      let output1 = '';
+      output1 = valArr.forEach((course) => {
+        output1 += `<button class=" btn btnStudyCourseRight"><em><b style="float:right">${course.duration}</b></em> : ${course.level} : ${course.code} (${course.name})</button> <br>`;
+        document.getElementById('output1').innerHTML = output1;
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('output1').style.display = 'block';
+        document.getElementById('output1').style.backgroundColor = '#333';
+        document.getElementById('output1').style.color = '#ffffff';
+      });
+    },
+
+    2000
+  );
+}
+
+//------------------------------EVENT ONCLICK - RETURNS & CONFIRMS COURSE CLICKED AND ADDS TO COURSE LIST
+function onclickCourse(e) {
+  // let output5;
+  let watchlistArr = [];
+  let val2 = e.target.textContent;
+  console.log(val2);
+  let confirmCourse = confirm(`- Please confirm -
+  
+  Add the following course to your list:
+  
+  ${val2}`);
+
+  if (confirmCourse == true) {
+    const li = document.createElement('li');
+    li.className = 'list-item';
+    li.appendChild(document.createTextNode(val2));
+    watchlistArr.push(val2);
+    console.log(watchlistArr);
+
+    document.getElementById('output5').appendChild(li);
+    document.getElementById('output5').style.display = 'block';
+  }
+}
 
 //CALL FETCH FUNCTION
 fetchData()

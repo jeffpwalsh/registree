@@ -4,6 +4,7 @@ body {
   background: #f3f3f3 fixed url(/registree/images/background.jpg);
   margin: 5px;
   padding: 0px;
+
 }
 
 /* PAGE LOADING SPINNER */
@@ -15,7 +16,7 @@ body {
   font-stretch: extra-expanded;
 }
 
-/* NAVBAR/HEADING  */
+/* NAVBAR/HEADING */
 #heading {
   width: 100%;
   position: fixed;
@@ -46,7 +47,7 @@ body {
 
 /* LAYOUT SPACER */
 .spacer {
-  height: 30vh;
+  height: 20vh;
 }
 
 /* FIELDS OF STUDIES - BUTTONS */
@@ -57,8 +58,6 @@ button.btn.btnStudyFields {
   border-bottom: 3px solid;
   color: #ffffff;
 }
-
-/* BUTTON PSUEDO'S */
 button.btn.btnStudyFields:focus {
   background-color: teal;
   border: none;
@@ -72,34 +71,40 @@ button.btn.btnStudyFields:hover {
 
 button.btn.btnStudyCourseLeft {
   background-color: teal;
-  margin: 3px;
-  width: 100%;
+  margin: 20px;
+  width: 95%;
   text-align: left;
 }
 
 button.btn.btnStudyCourseMiddle {
   background-color: #d9534f;
-  margin: 3px;
-  width: 100%;
+  margin: 3px auto;
+  width: 50%;
   text-align: left;
 }
 
 button.btn.btnStudyCourseRight {
   background-color: #f7f7f7;
-  margin: 3px;
-  width: 100%;
+  margin: 20px;
   text-align: left;
 }
 
-/* BUTTON PSUEDO'S */
 button.btn.btnStudyCourse:hover {
   background-color: transparent;
   margin: 3px;
-  width: 100%;
+  width: 95%;
   color: #ffffff;
 }
 
+/* GIF LOADER */
+img {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+}
+
 /* COLLAPSE FEATURE */
+
 .collapseFieldContainer {
   display: flex;
   margin: 0 auto 20px;
@@ -138,14 +143,29 @@ button.btn.btnStudyCourse:hover {
   background-color: #f7f7f7;
 }
 
-/* ARRAY DATA DISPLAY CONTAINER */
+/* CONTAINER DATA HOLDERS */
+/* #output,
+#output1,
+#output2,
+#output3,
+#output4,
+#output5 {
+  background-color: #444;
+  text-align: center;
+  border: 1px solid white;
+  padding: 20px;
+  
+  border-radius: 5px;
+} */
+
 .fieldDisplay {
+  /* background-color: yellow; */
   width: 100%;
   display: flex;
 }
 
-/* INDIVIDUAL ARRAY DATA DISPLAY CONTAINER */
 div#output,
+/* div#output1, */
 div#output2,
 div#output3 {
   display: inline-block;
@@ -193,4 +213,12 @@ div#output1 {
 
 div#output5 {
   display: none;
+}
+
+li {
+  list-style: none;
+}
+
+.list-item {
+  text-align: right;
 }
