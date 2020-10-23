@@ -8,6 +8,19 @@ async function fetchData() {
   console.log(response2);
   const data2 = await response2.json();
   console.log(data2);
+
+// CCONDITIONAL - PAGE LOAD SUCCESS
+if (data.length > 1) {
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('bodySection').style.display = 'block';
+
+  Array.prototype.push.apply(data, data2);
+
+
+
+
+
+
 }
 
   //CALL FETCH FUNCTION

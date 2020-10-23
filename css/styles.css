@@ -6,6 +6,15 @@ body {
   padding: 0px;
 }
 
+/* PAGE LOADING SPINNER */
+#loading h6 {
+  color: black;
+  font-weight: bolder;
+  width: 100%;
+  text-align: center;
+  font-stretch: extra-expanded;
+}
+
 /* NAVBAR/HEADING  */
 #heading {
   width: 100%;
