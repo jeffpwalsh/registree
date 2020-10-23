@@ -208,7 +208,7 @@ document.getElementById('bodySection').style.display = 'none';
 //-----------------------CALL FETCH FUNCTION
 fetchData()
   .then((response) => {
-    console.log(response);
+
   })
   //HANDLE ERRORS - REFIRES ON A ERROR STATUS
   .catch((error) => {

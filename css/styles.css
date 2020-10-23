@@ -2,8 +2,9 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background: #f3f3f3 fixed url(/registree/images/background.jpg);
-  margin: 5px;
-  padding: 0px;
+  margin: 0px;
+  padding: 2px;
+  
 }
 
 /* PAGE LOADING SPINNER */
@@ -44,9 +45,9 @@ body {
   margin-top: 5px;
 }
 
-/* LAYOUT SPACER */
+/* UTILITY LAYOUT SPACER */
 .spacer {
-  height: 20vh;
+  height: 100px;
 }
 
 /* FIELDS OF STUDIES - BUTTONS */
@@ -68,24 +69,17 @@ button.btn.btnStudyFields:hover {
   border-bottom: #555 3px solid;
 }
 
-button.btn.btnStudyCourseLeft {
+button.btn.btnStudyCourseLeft,
+button.btn.btnStudyCourseMiddle,
+button.btn.btnStudyCourseRight {
   background-color: teal;
-  margin: 3px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
   width: 100%;
   text-align: left;
-}
-
-button.btn.btnStudyCourseMiddle {
-  background-color: #d9534f;
-  margin: 3px auto;
-  width: 50%;
-  text-align: left;
-}
-
-button.btn.btnStudyCourseRight {
-  background-color: #f7f7f7;
-  margin: 20px;
-  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 button.btn.btnStudyCourse:hover {
@@ -107,6 +101,7 @@ img {
 .collapseFieldContainer {
   display: flex;
   margin: 0px auto 10px;
+  padding-top: 100px;
 }
 
 .collapseFieldLeft button,
