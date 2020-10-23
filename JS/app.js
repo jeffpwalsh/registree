@@ -200,7 +200,12 @@ function onclickCourse(e) {
   }
 }
 
-//CALL FETCH FUNCTION
+//SETUP AND FUNCTION CALLS
+//-----------------------CREATES LOADING PAGE
+document.getElementById('bodySection').style.display = 'none';
+
+
+//-----------------------CALL FETCH FUNCTION
 fetchData()
   .then((response) => {
     console.log(response);
@@ -210,7 +215,25 @@ fetchData()
     if (error) {
       console.log(error);
       console.log('Retrying');
+      document.querySelector('h6').innerText = 'Retrying';
       fetchData();
     }
     console.log(error);
   });
+
+  //-------------------------------- JQUERY - USER EXPERIENCE ANIMATION / BUTTONS / DISPLAY
+$(document).ready(function () {
+  $('.collapseFieldLeft').click(function () {
+    $('#output').slideToggle(1000);
+    $('#output1').fadeOut(1000);
+  });
+  $('.collapseFieldMiddle').click(function () {
+    $('#output2').slideToggle(1000);
+    $('#output1').fadeOut(1000);
+  });
+  $('.collapseFieldRight').click(function () {
+    $('#output3').slideToggle(1000);
+    $('#output1').fadeOut(1000);
+  });
+});
+

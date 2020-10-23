@@ -4,7 +4,6 @@ body {
   background: #f3f3f3 fixed url(/registree/images/background.jpg);
   margin: 5px;
   padding: 0px;
-
 }
 
 /* PAGE LOADING SPINNER */
@@ -71,8 +70,8 @@ button.btn.btnStudyFields:hover {
 
 button.btn.btnStudyCourseLeft {
   background-color: teal;
-  margin: 20px;
-  width: 95%;
+  margin: 3px;
+  width: 100%;
   text-align: left;
 }
 
@@ -107,7 +106,7 @@ img {
 
 .collapseFieldContainer {
   display: flex;
-  margin: 0 auto 20px;
+  margin: 0px auto 10px;
 }
 
 .collapseFieldLeft button,
