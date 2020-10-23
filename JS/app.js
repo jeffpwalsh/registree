@@ -16,11 +16,26 @@ if (data.length > 1) {
 
   Array.prototype.push.apply(data, data2);
 
+//UNDERSCORE.JS ARRAY REGROUPING OF OBJECTS FOR (NAME, LEVEL, DURATION)
+groupedByName = _.groupBy(data, function (course) {
+  return course.name;
+});
+console.log(groupedByName);
+
+groupedByLevel = _.groupBy(data, function (course) {
+  return course.level;
+});
+console.log(groupedByLevel);
+
+groupedByDuration = _.groupBy(data, function (course) {
+  return course.duration;
+});
+console.log(groupedByDuration);
 
 
 
 
-
+}
 }
 
   //CALL FETCH FUNCTION
